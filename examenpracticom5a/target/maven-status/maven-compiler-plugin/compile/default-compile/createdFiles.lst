@@ -1,0 +1,11 @@
+com\suarez\examenpracticom5a\controller\TrabajoController.class
+com\suarez\examenpracticom5a\modelo\Empleado.class
+com\suarez\examenpracticom5a\service\GenericService.class
+com\suarez\examenpracticom5a\modelo\Trabajo.class
+com\suarez\examenpracticom5a\service\TrabajoServicelmpl.class
+com\suarez\examenpracticom5a\ExamenPracticoM5AApplication.class
+com\suarez\examenpracticom5a\controller\EmpleadoController.class
+com\suarez\examenpracticom5a\repository\EmpleadoRepository.class
+com\suarez\examenpracticom5a\service\GenericServiceImpl.class
+com\suarez\examenpracticom5a\service\EmpleadoServicelmpl.class
+com\suarez\examenpracticom5a\repository\TrabajoRepository.class
