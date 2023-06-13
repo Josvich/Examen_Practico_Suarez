@@ -1,0 +1,57 @@
+Empleados
+
+INSERT INTO `empleado` (`id_empleado`, `apellido`, `dias_trabajo`, `direccion`, `fecha_nacimiento`, `nombre`, `observacion`, `sueldo`, `telefono`) VALUES
+(1, 'Suarez', 10, 'Rio Jubones', '2023-04-13 08:45:04.000000', 'Josue', 'Nada', NULL, '0983248831'),
+(2, 'Pillco', 16, 'Syausi', '2023-06-23 08:45:47.000000', 'Marcos', 'Nada', NULL, '09999999'),
+(3, 'Cabrera', 40, 'Cuenca', '2023-07-04 08:46:46.000000', 'Oscar', 'nada', NULL, '06484611');
+
+
+
+INSERT INTO `trabajo` (`id_trabajo`, `sueldo_total`, `id_empleado`) VALUES
+(1, 150, 1),
+(4, 240, 2),
+(5, 900, 3);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `empleado`
+--
+ALTER TABLE `empleado`
+  ADD PRIMARY KEY (`id_empleado`);
+
+--
+-- Indices de la tabla `trabajo`
+--
+ALTER TABLE `trabajo`
+  ADD PRIMARY KEY (`id_trabajo`),
+  ADD KEY `FKtpi2p71t7yd925md8mm4h8qk` (`id_empleado`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `empleado`
+--
+ALTER TABLE `empleado`
+  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `trabajo`
+--
+ALTER TABLE `trabajo`
+  MODIFY `id_trabajo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `trabajo`
+--
+ALTER TABLE `trabajo`
+  ADD CONSTRAINT `FKtpi2p71t7yd925md8mm4h8qk` FOREIGN KEY (`id_empleado`) REFERENCES `empleado` (`id_empleado`);
+COMMIT;
